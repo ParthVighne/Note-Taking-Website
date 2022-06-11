@@ -1,58 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Note Taking App</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">MyNotesApp</a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2 " id="searchTxt" type="search" placeholder="Search"
-                        aria-label="Search">
-                </form>
-            </div>
-        </div>
-    </nav>
-
+  <body>
     <div class="container my-5">
-        <h2 class="text-center text-dark ">Welcome to Note Taking App</h2>
+      <h2 class="text-center text-dark">Welcome to Note Taking App</h2>
+    </div>
+    <div class="container">
+      <hr />
+      <label
+        for="exampleFormControlTextarea1"
+        class="form-label text-dark my-2 h5"
+        >Search for a Note</label
+      >
+      <form class="d-flex" role="search">
+        <input
+          class="form-control me-2 bg-light"
+          id="searchTxt"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+      </form>
     </div>
 
     <div class="mb-3 container">
-        <hr>
-        <label for="exampleFormControlTextarea1" class="form-label text-dark my-2 h5">Enter a Note</label>
-        <textarea class="form-control" id="addTxt" rows="3"></textarea>
-        <button class="btn btn-primary my-2" id="addBtn">Add Note</button>
-        <hr>
+      <hr />
+      <label
+        for="exampleFormControlTextarea1"
+        class="form-label text-dark my-2 h5"
+        >Enter a Note</label
+      >
+      <textarea class="form-control bg-light" id="addTxt" rows="3"></textarea>
+      <button class="btn btn-primary my-2" id="addBtn">Add Note</button>
+      <button class="btn btn-danger my-2 mx-2" id="delBtn">
+        Delete All Notes
+      </button>
+      <hr />
     </div>
 
-    <h3 class="container">Your Notes </h3>
+    <h3 class="container">Your Notes</h3>
 
-    <div id="notes" class="row container-fluid mx-5">
-
-    </div>
-
-
-
+    <div id="notes" class="row container-fluid mx-5"></div>
 
     <script src="app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
-    </script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
