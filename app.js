@@ -37,7 +37,7 @@ function showNotes()
         html += `<div class="card mx-2 my-3" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Note ${index + 1} </h5>
-                <p class="card-text" id="elementTxt">${element}</p>
+                <p class="card-text">${element}</p>
                 <a href="#" id="${index}" onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</a>
             </div>
         </div>`;
@@ -69,4 +69,22 @@ function deleteNote(index)
     localStorage.setItem("notes",JSON.stringify(notesObj));
     showNotes();
 }
+
+let search = document.getElementById("searchTxt");
+search.addEventListener('input', function(){
+    let inputVal = search.value.toLowerCase();
+    let card = document.getElementsByClassName('card');
+    Array.from(card).forEach(function(element){
+        let cardTxt = element.getElementsByTagName('p')[0].innerText;
+        if(cardTxt.includes(inputVal))
+        {
+            element.style.display = "block";
+        }
+        else
+        {
+            element.style.display = "none";
+        }
+    })
+});
+
 
